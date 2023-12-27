@@ -10,6 +10,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100%;
+    position: relative; /* Added for positioning sun in the center */
 }
 
 /* Sun styles */
@@ -21,6 +22,7 @@ body, html {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     box-shadow: 0px 0px 5px yellow,
                 0px 0px 20px yellow,
                 0px 0px 70px yellow;
@@ -28,55 +30,73 @@ body, html {
 
 /* Earth orbit */
 .earth {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    animation: earthOrbit 10s linear infinite;
-}
-
-/* Earth styles */
-.earth::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 20px;
     height: 20px;
     background-color: blue;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 150px; /* Half of the orbit radius */
+    animation: earthOrbit 10s linear infinite;
+}
+
+/* Earth tail */
+.earth::after {
+    content: '';
+    position: absolute;
+    width: 60px; /* Tail length */
+    height: 2px; /* Tail thickness */
+    background: linear-gradient(to right, rgba(0, 0, 255, 0), blue);
+    top: 50%;
+    left: 50%;
+    transform-origin: left center;
 }
 
 /* Moon orbit */
 .moon {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: moonOrbit 2s linear infinite;
-}
-
-/* Moon styles */
-.moon::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 100%;
     width: 10px;
     height: 10px;
     background-color: grey;
     border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 20px; /* Half of the moon orbit radius */
+    animation: moonOrbit 2s linear infinite;
+}
+
+/* Moon tail */
+.moon::after {
+    content: '';
+    position: absolute;
+    width: 25px; /* Tail length */
+    height: 1px; /* Tail thickness */
+    background: linear-gradient(to right, rgba(128, 128, 128, 0), grey);
+    top: 50%;
+    left: 50%;
+    transform-origin: left center;
 }
 
 /* Animations */
 @keyframes earthOrbit {
-    0% { transform: rotate(0) translateX(150px); }
-    100% { transform: rotate(360deg) translateX(150px); }
+    0% {
+        transform: rotate(0) translateX(150px);
+        transform-origin: 0 center;
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px);
+        transform-origin: 0 center;
+    }
 }
 
 @keyframes moonOrbit {
-    0% { transform: translate(-50%, -50%) rotate(0) translateX(20px); }
-    100% { transform: translate(-50%, -50%) rotate(360deg) translateX(20px); }
+    0% {
+        transform: rotate(0) translateX(20px);
+        transform-origin: 0 center;
+    }
+    100% {
+        transform: rotate(360deg) translateX(20px);
+        transform-origin: 0 center;
+    }
 }
