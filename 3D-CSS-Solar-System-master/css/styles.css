@@ -1178,6 +1178,8 @@ h1 {
 #navbar a:hover, #data a:hover, #controls label:hover {
   color: #FFF; }
 
+
+  
 #data a.active {
   color: #0CF; }
   footer {
