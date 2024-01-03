@@ -6,16 +6,27 @@ const secondsSpan = document.getElementById('seconds');
 const fireworksCanvas = document.getElementById('fireworks');
 const ctx = fireworksCanvas.getContext('2d');
 
-let countdownDate = new Date('December 31, 2023 17:39:00').getTime();
+let countdownDate = new Date('January 1, 2024 00:00:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = countdownDate - now;
 
-    // ... [existing countdown logic] ...
+    if (distance > 0) {
+        // Calculate the time left if the countdown is still going
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (distance < 0) {
+        daysSpan.innerHTML = days + 'd ';
+        hoursSpan.innerHTML = hours + 'h ';
+        minutesSpan.innerHTML = minutes + 'm ';
+        secondsSpan.innerHTML = seconds + 's';
+    } else {
+        // If the countdown has finished, clear the interval, hide the countdown, show the message, and start fireworks
         clearInterval(interval);
+        countdown.style.display = 'none'; // Hide the countdown numbers
         displayNewYearMessage();
         showFireworks();
     }
@@ -23,7 +34,6 @@ function updateCountdown() {
 
 let interval = setInterval(updateCountdown, 1000);
 
-// Fireworks effect
 class Firework {
     constructor(x, y, color) {
         this.x = x;
@@ -78,8 +88,8 @@ function animate() {
 
 function displayNewYearMessage() {
     const newYearMessage = document.getElementById('newYearMessage');
-    newYearMessage.style.display = 'block';
-    newYearMessage.innerHTML = 'Happy New Year! <br>' + new Date().toLocaleString();
+    newYearMessage.style.display = 'block'; // Make sure the message is visible
+    newYearMessage.innerHTML = 'Happy New Year! From GuruhTech Coding <br>' + new Date().toLocaleString();
 }
 
 // Set canvas size
