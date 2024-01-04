@@ -8,7 +8,7 @@ This project fetches live sports match data using the LiveScore API, displays th
 
 ```bash
 pip install livescore_api tabulate Jinja2
-'''
+```
 
 Usage
 #Run the Python script to fetch live match data and generate the HTML file:
