@@ -21,7 +21,7 @@ Open the generated HTML file (matches_table.html) in a web browser to view the l
 
 ## Project Structure
 
-- **your_script_name.py**: The Python script to fetch live match data and generate the HTML file.
+- **livescore.py**: The Python script to fetch live match data and generate the HTML file.
 - **template.html**: The Jinja2 template file for the HTML output.
 - **matches_table.html**: The generated HTML file containing the live matches table.
 
