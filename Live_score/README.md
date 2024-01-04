@@ -10,7 +10,7 @@ Make sure you have the required Python libraries installed. You can install them
 pip install livescore_api tabulate Jinja2
 ```
 
-# Usage
+## Usage
 Run the Python script to fetch live match data and generate the HTML file:
 
 ```bash
