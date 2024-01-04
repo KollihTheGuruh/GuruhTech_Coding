@@ -4,14 +4,14 @@ This project fetches live sports match data using the LiveScore API, displays th
 
 ## Dependencies
 
-'Make sure you have the required Python libraries installed. You can install them using:'
+Make sure you have the required Python libraries installed. You can install them using:
 
 ```bash
 pip install livescore_api tabulate Jinja2
 ```
 
-#Usage
-#Run the Python script to fetch live match data and generate the HTML file:
+# Usage
+Run the Python script to fetch live match data and generate the HTML file:
 
 ```bash
 python3 live_score.py
