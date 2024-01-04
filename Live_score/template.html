@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #da0e0e;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #ec0909;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Matches Table</h2>
+
+    {% if table_data %}
+        <table>
+            <thead>
+                <tr>
+                    {% for header in table_headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table_data %}
+                    <tr>
+                        {% for cell in row %}
+                            <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No matches found.</p>
+    {% endif %}
+
+</body>
+</html>

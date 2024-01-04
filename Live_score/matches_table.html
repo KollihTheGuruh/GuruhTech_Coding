@@ -10,12 +10,12 @@
             width: 100%;
         }
         th, td {
-            border: 1px solid #dddddd;
+            border: 1px solid #da0e0e;
             text-align: left;
             padding: 8px;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #ec0909;
         }
     </style>
 </head>
@@ -23,28 +23,686 @@
 
     <h2>Matches Table</h2>
 
-    {% if table_data %}
+    
         <table>
             <thead>
                 <tr>
-                    {% for header in table_headers %}
-                        <th>{{ header }}</th>
-                    {% endfor %}
+                    
+                        <th>Serial Id</th>
+                    
+                        <th>League</th>
+                    
+                        <th>Country</th>
+                    
+                        <th>Match Id</th>
+                    
+                        <th>H Scores</th>
+                    
+                        <th>A Scores</th>
+                    
+                        <th>Kickoff</th>
+                    
+                        <th>Status</th>
+                    
+                        <th>Home</th>
+                    
+                        <th>H id</th>
+                    
+                        <th>Away</th>
+                    
+                        <th>A id</th>
+                    
                 </tr>
             </thead>
             <tbody>
-                {% for row in table_data %}
+                
                     <tr>
-                        {% for cell in row %}
-                            <td>{{ cell }}</td>
-                        {% endfor %}
+                        
+                            <td>14500</td>
+                        
+                            <td>LaLiga</td>
+                        
+                            <td>Spain</td>
+                        
+                            <td>976728</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104190000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Osasuna</td>
+                        
+                            <td>463</td>
+                        
+                            <td>Almeria</td>
+                        
+                            <td>4518</td>
+                        
                     </tr>
-                {% endfor %}
+                
+                    <tr>
+                        
+                            <td>15948</td>
+                        
+                            <td>FA Cup Round 3</td>
+                        
+                            <td>England</td>
+                        
+                            <td>1124137</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104230000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Crystal Palace</td>
+                        
+                            <td>2772</td>
+                        
+                            <td>Everton</td>
+                        
+                            <td>2917</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>15113</td>
+                        
+                            <td>Coppa Italia Round of 16</td>
+                        
+                            <td>Italy</td>
+                        
+                            <td>1057487</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104230000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Juventus</td>
+                        
+                            <td>4238</td>
+                        
+                            <td>Salernitana</td>
+                        
+                            <td>4765</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>15426</td>
+                        
+                            <td>A-League</td>
+                        
+                            <td>Australia</td>
+                        
+                            <td>1064093</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104114500</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Adelaide United</td>
+                        
+                            <td>410</td>
+                        
+                            <td>Wellington Phoenix</td>
+                        
+                            <td>403</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>14919</td>
+                        
+                            <td>Super League</td>
+                        
+                            <td>Greece</td>
+                        
+                            <td>1020205</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104180000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Panetolikos</td>
+                        
+                            <td>3511</td>
+                        
+                            <td>Panserraikos FC</td>
+                        
+                            <td>7746</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16104</td>
+                        
+                            <td>Friendlies 2024</td>
+                        
+                            <td>International Friendlies</td>
+                        
+                            <td>1142430</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104150000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Tajikistan</td>
+                        
+                            <td>9143</td>
+                        
+                            <td>Hong Kong</td>
+                        
+                            <td>6340</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>15672</td>
+                        
+                            <td>Ligue 1 U21</td>
+                        
+                            <td>Algeria</td>
+                        
+                            <td>1138261</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104170000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>ASO Chlef U21</td>
+                        
+                            <td>272097</td>
+                        
+                            <td>USM Alger U21</td>
+                        
+                            <td>272103</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16390</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 3</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129656</td>
+                        
+                            <td>0</td>
+                        
+                            <td>5</td>
+                        
+                            <td>20240104010000</td>
+                        
+                            <td>FT</td>
+                        
+                            <td>ABC U20</td>
+                        
+                            <td>2840</td>
+                        
+                            <td>Coimbra U20</td>
+                        
+                            <td>282231</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16394</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 7</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129680</td>
+                        
+                            <td>5</td>
+                        
+                            <td>1</td>
+                        
+                            <td>20240104013000</td>
+                        
+                            <td>FT</td>
+                        
+                            <td>Sao Paulo U20</td>
+                        
+                            <td>388</td>
+                        
+                            <td>Porto Vitoria U20</td>
+                        
+                            <td>244048</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16397</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 10</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129697</td>
+                        
+                            <td>0</td>
+                        
+                            <td>3</td>
+                        
+                            <td>20240104013000</td>
+                        
+                            <td>FT</td>
+                        
+                            <td>Marilia Atletico U20</td>
+                        
+                            <td>2743</td>
+                        
+                            <td>Bangu U20</td>
+                        
+                            <td>250681</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16402</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 15</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129727</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104190000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Comercial Tiete FC SP U20</td>
+                        
+                            <td>217260</td>
+                        
+                            <td>Ivinhema U20</td>
+                        
+                            <td>282218</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16403</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 16</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129733</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104190000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Desportivo Brasil U20</td>
+                        
+                            <td>3029</td>
+                        
+                            <td>Capivariano U20</td>
+                        
+                            <td>2747</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16404</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 17</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129739</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104190000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Sfera U20</td>
+                        
+                            <td>282219</td>
+                        
+                            <td>Botafogo SP U20</td>
+                        
+                            <td>3473</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16405</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 18</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129745</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104231500</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>FC SKA Brasil SP U20</td>
+                        
+                            <td>202856</td>
+                        
+                            <td>Floresta EC CE U20</td>
+                        
+                            <td>145485</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16408</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 21</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129763</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104190000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Guaratingueta U20</td>
+                        
+                            <td>244053</td>
+                        
+                            <td>RB Bragantino SP U20</td>
+                        
+                            <td>179292</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16409</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 22</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129769</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104190000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Taubate U20</td>
+                        
+                            <td>2895</td>
+                        
+                            <td>Inter de Limeira U20</td>
+                        
+                            <td>3354</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16410</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 23</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129775</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104170000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Aster Brazil U20</td>
+                        
+                            <td>203969</td>
+                        
+                            <td>Santo Andre U20</td>
+                        
+                            <td>3557</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16411</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 24</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129781</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104211500</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Oeste FC U20</td>
+                        
+                            <td>191</td>
+                        
+                            <td>Uniao/ABC U20</td>
+                        
+                            <td>3427</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16413</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 26</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129793</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104233000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Agua Santa U20</td>
+                        
+                            <td>352</td>
+                        
+                            <td>Nova Venecia U20</td>
+                        
+                            <td>282222</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16414</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 27</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129799</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104190000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Goias U20</td>
+                        
+                            <td>3500</td>
+                        
+                            <td>Madureira RJ U20</td>
+                        
+                            <td>244102</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16415</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 28</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129805</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104211500</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Cruzeiro U20</td>
+                        
+                            <td>192</td>
+                        
+                            <td>Capital TO U20</td>
+                        
+                            <td>3580</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>16417</td>
+                        
+                            <td>Sao Paulo Youth Cup: Group 30</td>
+                        
+                            <td>Brazil</td>
+                        
+                            <td>1129819</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104170000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>Vitoria U20</td>
+                        
+                            <td>484</td>
+                        
+                            <td>Picos U20</td>
+                        
+                            <td>244045</td>
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            <td>14958</td>
+                        
+                            <td>1st Division</td>
+                        
+                            <td>Cyprus</td>
+                        
+                            <td>1022267</td>
+                        
+                            <td>None</td>
+                        
+                            <td>None</td>
+                        
+                            <td>20240104200000</td>
+                        
+                            <td>NS</td>
+                        
+                            <td>AEZ Zakakiou</td>
+                        
+                            <td>2781</td>
+                        
+                            <td>Doxa Katokopia</td>
+                        
+                            <td>4343</td>
+                        
+                    </tr>
+                
             </tbody>
         </table>
-    {% else %}
-        <p>No matches found.</p>
-    {% endif %}
+    
 
 </body>
 </html>
