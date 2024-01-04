@@ -8,14 +8,14 @@ Make sure you have the required Python libraries installed. You can install them
 
 ```bash
 pip install livescore_api tabulate Jinja2
-'''bash
+
 
 # Usage
 #Run the Python script to fetch live match data and generate the HTML file:
 
 '''bash
 python3 live_score.py
-'''bash
+
 
 Open the generated HTML file (matches_table.html) in a web browser to view the live matches table.
 
