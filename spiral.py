@@ -26,7 +26,7 @@ def print_bold_text(t, text, x, y):
 
 # Create a turtle object with enhanced attributes
 my_turtle = turtle.Turtle()
-my_turtle.speed(2)  # Set drawing speed to a moderate value
+my_turtle.speed(22)  # Set drawing speed to a moderate value
 my_turtle.pensize(2)  # Set pen size to 2 for a bolder appearance
 
 # Draw the enhanced pattern with 50 squares and initial step of 10
