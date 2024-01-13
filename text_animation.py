@@ -1,3 +1,15 @@
+import time
+import sys
+
+def typewriter_effect(text):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.1)  # You can adjust the speed of typing here
+    print()
+
+# Usage
+typewriter_effect('''
 import turtle
 import random
 import colorsys
@@ -41,3 +53,4 @@ for _ in range(3):  # Repeat the following block 3 times
 # Hide the turtle and display the result
 my_turtle.hideturtle()
 turtle.done()
+''')
