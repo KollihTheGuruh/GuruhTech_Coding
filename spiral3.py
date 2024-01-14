@@ -1,15 +1,3 @@
-import time
-import sys
-
-def typewriter_effect(text):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.1)  # You can adjust the speed of typing here
-    print()
-
-# Usage
-typewriter_effect('''
 from turtle import *
 import colorsys
 
@@ -45,5 +33,3 @@ for i in range(90):
     left(2)
     h += 0.02
 done()
-
-''')
