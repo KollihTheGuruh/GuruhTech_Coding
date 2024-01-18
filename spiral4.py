@@ -1,10 +1,18 @@
 import turtle
-import math
 
-# Function to create a branch of the fractal tree
+# Function to create a branch of the fractal tree with flowers at the branches
 def draw_branch(turtle, branch_length, level):
     if level <= 0:
-        return
+        # Draw a colored dot for the flower
+        heading = turtle.heading()
+        if 0 <= heading < 90:
+            turtle.dot(4, "yellow")
+        elif 90 <= heading < 180:
+            turtle.dot(4, "green")
+        elif 180 <= heading < 270:
+            turtle.dot(4, "pink")
+        else:
+            turtle.dot(4, "white")
     else:
         turtle.forward(branch_length)
         turtle.left(45)
