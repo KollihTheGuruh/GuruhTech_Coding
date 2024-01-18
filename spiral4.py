@@ -1,6 +1,5 @@
 import turtle
 
-# Function to set the flower color based on the angle
 def set_flower_color(turtle, angle):
     if 0 <= angle < 90:
         turtle.color("yellow")
@@ -11,7 +10,6 @@ def set_flower_color(turtle, angle):
     else:
         turtle.color("white")
 
-# Function to create a branch of the fractal tree with flowers
 def draw_branch(turtle, branch_length, level, angle):
     if level <= 0:
         set_flower_color(turtle, angle)
@@ -26,7 +24,6 @@ def draw_branch(turtle, branch_length, level, angle):
         turtle.left(45)
         turtle.backward(branch_length)
 
-# Function to create a full 360-degree fractal tree pattern
 def draw_fractal_forest(turtle, branch_length, level, num_trees):
     angle_increment = 360 / num_trees
     angle = 0
@@ -36,10 +33,18 @@ def draw_fractal_forest(turtle, branch_length, level, num_trees):
         angle += angle_increment
 
 # Set up the screen and turtle
-turtle.speed(30)
-turtle.hideturtle()
 turtle.bgcolor("black")
 turtle.color("white")
+
+# Speed settings
+drawing_speed = 10   # Fastest (0 for no animation, 1-10 for increasing speed)
+update_interval = 0 # Update screen every 'n' frames (0 for no automatic update)
+
+turtle.speed(drawing_speed)
+
+# Turn off the animation if drawing_speed is set to 0
+if drawing_speed == 0:
+    turtle.tracer(0, update_interval)
 
 # Position the turtle
 turtle.penup()
@@ -48,6 +53,11 @@ turtle.pendown()
 turtle.setheading(90)  # Start facing "north"
 
 # Draw the fractal forest
-draw_fractal_forest(turtle, 80, 5, 36)  # Draw 36 trees to make a full circle
+draw_fractal_forest(turtle, 80, 5, 36)
 
+# Update the screen after drawing is done
+if drawing_speed == 0:
+    turtle.update()
+
+# Keep the window open until it's clicked
 turtle.done()
