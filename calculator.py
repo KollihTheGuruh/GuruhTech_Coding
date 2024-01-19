@@ -28,18 +28,24 @@ def on_click(char):
             char += '('  # Open parenthesis for the user
         display.insert(tk.END, char)
 
-
 def create_button(root, text, row, col, command=None, colspan=1, bgcolor="#f0f0f0"):
     button = tk.Button(root, text=text, command=lambda: command(text), width=5, bg=bgcolor)
     button.grid(row=row, column=col, columnspan=colspan, sticky="nsew", padx=2, pady=2)
     return button
 
+# Initialize main window
 root = tk.Tk()
 root.title("Scientific Calculator")
+
+# Define size and layout to mimic a 9-inch phone screen
+screen_width = 300  # Adjust as needed for your screen
+screen_height = int(screen_width * 16 / 9)  # 16:9 aspect ratio
+root.geometry(f"{screen_width}x{screen_height}")
 
 # Color styling
 button_color = "#e0e0e0"
 special_button_color = "#c0c0c0"
+root.configure(bg='black')
 
 # Grid configuration
 for i in range(1, 7):
@@ -50,24 +56,23 @@ for i in range(1, 7):
 display = tk.Entry(root, font=("Arial", 18), borderwidth=5, relief="ridge")
 display.grid(row=0, column=0, columnspan=4, sticky="nsew")
 
-# Standard buttons
+# Define buttons
 buttons = [
+    # Standard buttons
     ('7', 1, 0, button_color), ('8', 1, 1, button_color), ('9', 1, 2, button_color),
     ('4', 2, 0, button_color), ('5', 2, 1, button_color), ('6', 2, 2, button_color),
     ('1', 3, 0, button_color), ('2', 3, 1, button_color), ('3', 3, 2, button_color),
     ('0', 4, 0, button_color), ('+', 1, 3, special_button_color), ('-', 2, 3, special_button_color),
     ('*', 3, 3, special_button_color), ('/', 4, 3, special_button_color), ('=', 4, 2, special_button_color),
     ('C', 4, 1, special_button_color),
-]
-
-# Scientific buttons
-sci_buttons = [
+    # Scientific buttons
     ('sin', 5, 0, special_button_color), ('cos', 5, 1, special_button_color), ('tan', 5, 2, special_button_color),
     ('√', 6, 0, special_button_color), ('x²', 6, 1, special_button_color), ('^', 6, 2, special_button_color),
     ('(', 5, 3, special_button_color), (')', 6, 3, special_button_color),
 ]
 
-for (text, row, col, color) in buttons + sci_buttons:
+# Create buttons
+for (text, row, col, color) in buttons:
     create_button(root, text, row, col, on_click, 1, color)
 
 root.mainloop()
