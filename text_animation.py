@@ -11,39 +11,34 @@ def typewriter_effect(text):
 # Usage
 typewriter_effect('''
 from turtle import *
-import colorsys
 
-speed(0)
-hideturtle()
-bgcolor('black')
-tracer(5)
-width(2)
-h = 0.01
+def draw_heart():
+    color("red")
+    begin_fill()
+    pensize(3)
+    left(50)
+    forward(133)
+    circle(50, 200)
+    right(140)
+    circle(50, 200)
+    forward(133)
+    end_fill()
 
-for i in range(90):
-    color(colorsys.hsv_to_rgb(h,1,1))
-    forward(100)
-    left(60)
-    forward(100)
-    right(120)
-    circle(50)
-    left(240)
-    forward(100)
-    left(60)
-    forward(100)
-    h += 0.02
-    color(colorsys.hsv_to_rgb(h,1,1))
-    forward(100)
-    right(60)
-    forward(100)
-    left(120)
-    circle(-50)
-    right(240)
-    forward(100)
-    right(60)
-    forward(100)
-    left(2)
-    h += 0.02
-done()
+def write_love():
+    penup()
+    goto(-30, -100)
+    colors = ["lightcoral", "coral", "darkorange", "orangered", "red"]
+    for color in colors:
+        pencolor(color)
+        write("Love", align="center", font=("Verdana", 24, "bold"))
+        goto(xcor() + 1, ycor() - 1)
+
+def main():
+    speed(3)
+    draw_heart()
+    write_love()
+    done()
+
+main()
 
 ''')
