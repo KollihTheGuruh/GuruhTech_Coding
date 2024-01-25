@@ -1,0 +1,11 @@
+.inline-img {
+    float: right;
+    margin-right: 10px; /* Add space to the right of the image */
+    margin-bottom: 10px; /* Add space below the image */
+    /* width: 50%; Adjust size as needed */
+}
+
+/* .inline-img {
+    max-width: 100%;
+    height: auto;
+} */
